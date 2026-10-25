@@ -2,6 +2,7 @@
 import { useState, useMemo } from "react";
 import Logo from "./Logo";
 import { games } from "../data/skins";
+import Link from "next/link";
 
 export default function Store({ skins }) {
   const [game, setGame] = useState("Todos");
@@ -70,6 +71,7 @@ export default function Store({ skins }) {
         <Logo size={28} />
         <span>© 2026 SkinZone. Marca no afiliada a los juegos mencionados.</span>
       </footer>
+      <Link href="/aviso-confidencialidad">Aviso de Confidencialidad</Link>
     </>
   );
 }
