@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Logo from "../../components/Logo";
+import ServicePage from "../../components/ServicePage";
 
 export const metadata = {
   title: "Aviso de Confidencialidad | SkinZone",
@@ -8,17 +7,8 @@ export const metadata = {
 
 export default function Aviso() {
   return (
-    <>
-      <header className="top">
-        <Link className="brand" href="/">
-          <Logo />
-          <span>SkinZone</span>
-        </Link>
-      </header>
-      <main className="wrap legal">
-        <h1>Aviso de Confidencialidad</h1>
-        <p><small>Última actualización: 25 de octubre de 2026</small></p>
-
+    <ServicePage title="Aviso de Confidencialidad" intro="Última actualización: 25 de octubre de 2026">
+      <div className="legal">
         <h2>1. Responsable</h2>
         <p>SkinZone es responsable del tratamiento de tus datos personales y de su protección.</p>
 
@@ -36,9 +26,7 @@ export default function Aviso() {
 
         <h2>6. Cambios al aviso</h2>
         <p>Cualquier cambio se publicará en esta página.</p>
-
-        <p><Link href="/">← Volver a la tienda</Link></p>
-      </main>
-    </>
+      </div>
+    </ServicePage>
   );
 }
